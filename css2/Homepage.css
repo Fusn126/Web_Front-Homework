@@ -1,0 +1,22 @@
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+li
+{
+display:inline;
+}
+#user{
+    float: left;
+}
+#post{
+    position: absolute;
+    left: 250px;
+    top: 115px;
+    width: 1000px;
+    height: 400px;
+
+
+}
