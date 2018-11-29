@@ -1,0 +1,136 @@
+body{
+	background-image:url(../img/5-120601095138.png) ;
+}
+a{
+    color: #999;
+    text-decoration: none;
+    cursor: pointer
+}
+a:hover {
+    color: #5188a6;
+    text-decoration: none
+}
+.guiding_bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #08639C;
+} 
+.guiding_bar{
+	margin: 0px 0px 0px 0px;
+}
+.guiding_bar li {
+    float: left;
+}
+.guiding_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.guiding_bar li a:hover {
+    background-color: #111;
+}
+.search_bar{
+    float: right;
+	margin:50px 0px 0px 0px;
+
+}
+.side_panel{
+	background-color: white;
+	height: 1500px;
+	width:200px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 30px;
+	border-right:1px dashed #0099FF;
+	float: left;
+}
+.side_panel dt{
+	margin-bottom:10px;
+	height: ;
+	background-color: lightgray;
+
+}
+.side_panel dd{
+	margin-bottom:10px;
+	margin-left: 10px;
+
+}
+.side_panel dd a{
+	    display: block;
+	    color: brown;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+}
+.side_panel dd a:hover{
+	background-color: #AAAAAA;
+	
+}
+.side_panel2{
+	height: 1500px;
+	width:200px;
+	float:right;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	border-left:1px dashed #0099FF;
+	background-color: white;
+	
+}
+.side_panel2 li{
+	margin-bottom:10px;
+	margin-left: 10px;
+}
+.side_panel2 li a{
+	    display: block;
+	    color: #111111;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+}
+.side_panel2 li a:hover{
+	background-color: #AAAAAA;
+	
+}
+.main_page{
+	background-color: white;
+	width:85%;
+	height: 1500px;
+	margin: 30px;
+}
+#cube{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+}
+footer{
+  background: #08639C;
+  color:#c0c0c0;
+  padding: 10px;
+  text-align: center;
+  font-size: x-small;  
+  clear:both;
+}
+footer .Disclaimer {
+  font-style: italic;
+}
+footer p {
+  margin: 3px;
+}
+.whole{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+@media only screen and (max-width:500px) {    
+    .side_panel{
+        display: none;
+    }
+		.side_panel2{
+			display:none;
+		}
+
+}
