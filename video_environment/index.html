@@ -21,64 +21,9 @@
 	</head>
 	<!--/head-->
 	<body>
-		<header id="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 overflow">
-						<div class="social-icons pull-right">
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-			<div class="navbar navbar-inverse" role="banner">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+		<div id="header1">
 
-						<a class="navbar-brand" href="index.html">
-							<h1><img src="../assets/images/logo.png.png" alt="logo" width="208px" height="78px"></h1>
-						</a>
-
-					</div>
-					<div class="collapse navbar-collapse">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="../login_register/index.html">主页</a></li>
-							<li class="dropdown"><a href="../instruction/index.html">认识编程<i class="fa fa-angle-down"></i></a>
-								<ul role="menu" class="sub-menu">
-									<li><a href="aboutus.html">About</a></li>
-								</ul>
-							</li>
-							<li class="dropdown"><a href="../video_environment/index.html">环境搭建<i class="fa fa-angle-down"></i></a>
-							</li>
-							<li class="dropdown"><a href="../posts/index.html">代码教学 <i class="fa fa-angle-down"></i></a>
-								<ul role="menu" class="sub-menu">
-									<li><a href="blog.html">Html</a></li>
-									<li><a href="blogtwo.html">css</a></li>
-									<li><a href="blogone.html">javascript</a></li>
-									<li><a href="blogthree.html">java</a></li>
-									<li><a href="blogfour.html">php</a></li>
-									<li><a href="blogdetails.html">ruby</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div class="search">
-						<form role="form">
-							<i class="fa fa-search"></i>
-							<div class="field-toggle">
-								<input type="text" class="search-form" autocomplete="off" placeholder="Search">
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</header>
+		</div>
 		<!--/#header-->
 		<section id="page-breadcrumb">
 			<div class="vertical-center sun">
@@ -94,11 +39,13 @@
 				</div>
 			</div>
 		</section>
-			<section class="demo-section demo-section--light" id="demo" style="margin-top: 50px;">
-				<div class="container">
-					<video poster="../assets/images/ckin.jpg" src="../assets/mp4/ckin.mp4" data-ckin="default" data-overlay="1"></video>
-				</div>
-			</section>
+		<section class="demo-section demo-section--light" id="demo" style="margin-top: 50px;">
+			<div class="container">
+				<video poster="../assets/images/ckin.jpg" src="../assets/mp4/ckin.mp4" data-ckin="default" data-overlay="1"></video>
+			</div>
+		</section>
+		<div id="footer1">
+		</div>
 		<script src="../assets/js/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../assets/js/lightbox.min.js"></script>
@@ -106,4 +53,10 @@
 		<script type="text/javascript" src="../assets/js/main.js"></script>
 		<script src="../assets/js/ckin.js"></script>
 	</body>
+	<script>
+		$("#header1").load("../common/header.html");
+	</script>
+	<script>
+		$("#footer1").load("../common/footer.html");
+	</script>
 </html>
