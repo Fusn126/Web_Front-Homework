@@ -162,44 +162,9 @@
 		<!--/#action-->
 		<section>
 			<div class="container" style="margin-bottom: 50px;">
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">On Humans &amp; other Beings</h2>
-							<div class="loader"></div>
-							<span class="category">Stories for humans</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
-							</div>
-						</a>
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">The Things we Lost in the Fire</h2>
-							<div class="loader"></div>
-							<span class="category">Love &amp; Hate</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 5 min read</span>
-							</div>
-						</a>
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">What Goes Around Comes Around</h2>
-							<div class="loader"></div>
-							<span class="category">Nutrition</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 6 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2 min read</span>
-							</div>
-						</a>
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">Hope for Amy Walters</h2>
-							<div class="loader"></div>
-							<span class="category">Life &amp; Death</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 6 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2 min read</span>
-							</div>
-						</a>
-						</div>
+				<div id="tags">
 				</div>
+			</div>
 		</section>
 		<!--/#features-->
 		<footer id="footer">
@@ -210,8 +175,8 @@
 					</div>
 					<div class="col-sm-12">
 						<div class="copyright-text text-center">
-							<p>&copy; Your Company 2014. All Rights Reserved.</p>
-							<p>Designed by <a target="_blank" href="http://www.jq22.com">Themeum</a></p>
+							<p>&copy; Your 2014. All Rights Reserved.</p>
+							<p>Designed by Xmen</a></p>
 						</div>
 					</div>
 				</div>
@@ -238,9 +203,46 @@
 			}
 		</script>
 		<script src="assets/js/jquery-1.10.2.js"></script>
+		<script src="./node_modules/ejs/ejs.min.js"></script>
 		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="assets/js/lightbox.min.js"></script>
 		<script type="text/javascript" src="assets/js/wow.min.js"></script>
+		<script >
+			 window.onload=function(){
+			    var tem=document.getElementById("tem").innerHTML;
+			    var html=ejs.render(tem,data);
+			    document.getElementById("tags").innerHTML=html;
+			}
+		    var data={
+		                data1:[{"title":"新的内容","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+						      {"title":"新的内容","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容5","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容4","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容2","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+						]
+		            };
+		</script>
+		<script type="text/javascript" id="tem">
+		      <%for (var i=0;i<data1.length;i++){%>
+		      <div class="col-md-3 col-sm-4">
+		      	<div class="single-blog two-column">
+		      		<div class="post-content overflow">
+		      			<h2 class="post-title bold"><a href="blogdetails.html"><%=data1[i].title%></a></h2>
+		      			<h3 class="post-author"><a href="#"><%=data1[i].writer%></a></h3>
+		      			<p><%=data1[i].content%></p>
+		      			<a href="#" class="read-more">View More</a>
+		      			<div class="post-bottom overflow">
+		      				<ul class="nav nav-justified post-nav">
+		      					<li><a href="#"><i class="fa fa-heart"></i>32 Love</a></li>
+		      					<li><a href="#"><i class="fa fa-comments"></i>3 Comments</a></li>
+		      				</ul>
+		      			</div>
+		      		</div>
+		      	</div>
+		      </div>
+		    <%}%>
+		</script>
 		<script type="text/javascript" src="assets/js/main.js"></script>
 	</body>
 </html>

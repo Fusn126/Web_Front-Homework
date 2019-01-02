@@ -20,9 +20,69 @@
 	</head>
 	<!--/head-->
 	<body>
-		<div id="header1">
+		<header id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 overflow">
+								<div class="social-icons pull-right">
+									<div id="text-login"><a href="login.html" class="btn btn-common">登陆</a></div>
+									<div id="home">
+										欢迎你！ <a id="login-name"></a>&nbsp;&nbsp;<a href="javascript:;" id="outlogin" class="btn btn-common">退出登陆</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navbar navbar-inverse" role="banner">
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
 		
-		</div>
+								<a class="navbar-brand" href="index.html">
+									<h1><img src="../assets/images/logo.png.png" alt="logo" width="208px" height="78px"></h1>
+								</a>
+		
+							</div>
+							<div class="collapse navbar-collapse">
+								<ul class="nav navbar-nav navbar-right">
+									<li class="active"><a href="index.html">主页</a></li>
+									<li class="dropdown"><a href="../instruction/index.html">认识编程<i class="fa fa-angle-down"></i></a>
+										<ul role="menu" class="sub-menu">
+											<li><a href="aboutus.html">About</a></li>
+										</ul>
+									</li>
+									<li class="dropdown"><a href="../video_environment/index.html">环境搭建<i class="fa fa-angle-down"></i></a>
+									</li>
+									<li class="dropdown"><a href="../posts/index.html">代码教学 <i class="fa fa-angle-down"></i></a>
+										<ul role="menu" class="sub-menu">
+											<li><a href="blog.html">Html</a></li>
+											<li><a href="blogtwo.html">css</a></li>
+											<li><a href="blogone.html">javascript</a></li>
+											<li><a href="blogthree.html">java</a></li>
+											<li><a href="blogfour.html">php</a></li>
+											<li><a href="blogdetails.html">ruby</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="search">
+								<form role="form">
+									<i class="fa fa-search"></i>
+									<div class="field-toggle">
+										<input type="text" class="search-form" autocomplete="off" placeholder="Search">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</header>
+		</html>
+		
 		<!--/#header-->
 
 		<section id="home-slider">
@@ -46,7 +106,7 @@
 			<div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
 		</section>
 		<!--/#home-slider-->
-<section id="services">
+        <section id="services">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -103,44 +163,9 @@
 		<!--/#action-->
 		<section>
 			<div class="container" style="margin-bottom: 50px;">
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">On Humans &amp; other Beings</h2>
-							<div class="loader"></div>
-							<span class="category">Stories for humans</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
-							</div>
-						</a>
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">The Things we Lost in the Fire</h2>
-							<div class="loader"></div>
-							<span class="category">Love &amp; Hate</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 7 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 5 min read</span>
-							</div>
-						</a>
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">What Goes Around Comes Around</h2>
-							<div class="loader"></div>
-							<span class="category">Nutrition</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 6 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2 min read</span>
-							</div>
-						</a>
-						<a class="grid__item" href="#">
-							<h2 class="title title--preview">Hope for Amy Walters</h2>
-							<div class="loader"></div>
-							<span class="category">Life &amp; Death</span>
-							<div class="meta meta--preview">
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> 6 Apr</span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 2 min read</span>
-							</div>
-						</a>
+						<div id="tags">
 						</div>
-				</div>
+			</div>
 		</section>
 		<!--/#features-->
 		<div id="footer1">
@@ -166,15 +191,55 @@
 			}
 		</script>
 		<script src="../assets/js/jquery-1.10.2.js"></script>
+		<script src="../node_modules/ejs/ejs.min.js"></script>
 		<script type="text/javascript" src="../assets/js/../assets/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../assets/js/lightbox.min.js"></script>
 		<script type="text/javascript" src="../assets/js/wow.min.js"></script>
 		<script type="text/javascript" src="../assets/js/main.js"></script>
 		<script>
-			$("#header1").load("../common/header.html");
-		</script>
-		<script>
 			$("#footer1").load("../common/footer.html");
+		</script>
+		<script >
+			 window.onload=function(){
+			    var tem=document.getElementById("tem").innerHTML;
+			    var html=ejs.render(tem,data);
+			    document.getElementById("tags").innerHTML=html;
+			}
+		    var data={
+		                data1:[{"title":"新的内容","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+						      {"title":"新的内容","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容5","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容4","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+								{"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+								{"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+							    {"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},	
+								{"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+								{"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+								{"title":"新的内容3","writer":"付申","content":"新的内容不代表老的东西会消失的"},			
+							    {"title":"新的内容2","writer":"付申","content":"新的内容不代表老的东西会消失的"},
+						]
+		            };
+		</script>
+		<script type="text/javascript" id="tem">
+		      <%for (var i=0;i<data1.length;i++){%>
+		      <div class="col-md-3 col-sm-4">
+		      	<div class="single-blog two-column">
+		      		<div class="post-content overflow">
+		      			<h2 class="post-title bold"><a href="blogdetails.html"><%=data1[i].title%></a></h2>
+		      			<h3 class="post-author"><a href="#"><%=data1[i].writer%></a></h3>
+		      			<p><%=data1[i].content%></p>
+		      			<a href="#" class="read-more">View More</a>
+		      			<div class="post-bottom overflow">
+		      				<ul class="nav nav-justified post-nav">
+		      					<li><a href="#"><i class="fa fa-heart"></i>32 Love</a></li>
+		      					<li><a href="#"><i class="fa fa-comments"></i>3 Comments</a></li>
+		      				</ul>
+		      			</div>
+		      		</div>
+		      	</div>
+		      </div>
+		    <%}%>
 		</script>
 	</body>
 </html>
